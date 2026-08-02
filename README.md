@@ -131,21 +131,80 @@ PHP-MySQL-Product-Management-System/
 ├── .gitignore
 ├── .env.example
 └── README.md
+```
 
 ---
 
-## 🗄️ Database Setup
+## ⚙️ Setup & Installation
 
-### 1. Start XAMPP
+Follow the steps below to run the project locally using XAMPP.
 
-Start the following services:
+### 1. Install XAMPP
+
+Download and install XAMPP on your computer.
+
+Start the following services from the XAMPP Control Panel:
 
 - Apache
 - MySQL
 
-### 2. Open phpMyAdmin
+### 2. Clone the Repository
 
-Open:
+Open your terminal and run:
 
-```text
-http://localhost/phpmyadmin/
+```bash
+git clone https://github.com/NimeshNar/PHP-MySQL-Product-Management-System.git
+```
+
+---
+
+## 🔐 Security Implementation
+
+This project follows several secure development practices to protect user data and prevent common web application vulnerabilities.
+
+- **Password Hashing:** User passwords are securely hashed using PHP's `password_hash()` function.
+- **Password Verification:** Login authentication uses `password_verify()` to securely verify user passwords.
+- **SQL Injection Prevention:** Prepared statements are used for database queries.
+- **CSRF Protection:** CSRF tokens protect state-changing forms from unauthorized requests.
+- **Secure CSRF Validation:** `hash_equals()` is used to securely compare CSRF tokens.
+- **XSS Protection:** User-generated content is escaped using `htmlspecialchars()`.
+- **Server-Side Validation:** Form inputs are validated on the server before processing.
+- **Session Security:** Session IDs are regenerated after successful login to help prevent session fixation attacks.
+- **Duplicate Account Prevention:** Duplicate usernames and email addresses are checked during registration.
+- **Error Handling:** Database errors are logged securely instead of exposing sensitive information to users.
+
+---
+
+## 📋 Database Tables
+
+### User Table
+
+| Column | Type | Description |
+|---|---|---|
+| `name` | VARCHAR(100) | Unique username |
+| `email` | VARCHAR(150) | Unique email address |
+| `password` | VARCHAR(255) | Securely hashed password |
+
+### Product Table
+
+| Column | Type | Description |
+|---|---|---|
+| `pid` | INT | Auto-increment product ID |
+| `pname` | VARCHAR(255) | Product name |
+| `pprice` | DECIMAL(10,2) | Product price |
+| `pcategory` | VARCHAR(100) | Product category |
+| `pquantity` | INT | Product quantity |
+
+---
+
+## 👨‍💻 Author
+
+**Nimesh Nar**
+
+### GitHub
+
+[View My GitHub Profile](https://github.com/NimeshNar)
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository.
