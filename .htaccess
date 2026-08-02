@@ -1,0 +1,12 @@
+# Disable directory browsing for security
+Options -Indexes
+
+# Set default index file order
+DirectoryIndex index.php login.php
+
+# Safe HTTPS Redirection (Uncomment below 4 lines in production if hosting supports SSL)
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
