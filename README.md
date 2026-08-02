@@ -131,3 +131,21 @@ PHP-MySQL-Product-Management-System/
 ├── .gitignore
 ├── .env.example
 └── README.md
+
+---
+
+## 🗄️ Database Setup
+
+### 1. Start XAMPP
+
+Start the following services:
+
+- Apache
+- MySQL
+
+### 2. Open phpMyAdmin
+
+Open:
+
+```text
+http://localhost/phpmyadmin/
